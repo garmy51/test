@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var colorArry: [UIColor] = [UIColor.darkGray, UIColor.green, UIColor.magenta, UIColor.cyan, UIColor.purple]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -16,8 +16,11 @@ class ViewController: UIViewController {
 
     @IBAction func button(_ sender: Any) {
        print("0000")
-        view.backgroundColor = UIColor.brown
+        view.backgroundColor = colorArry.randomElement()
+        
     }
     
 }
+
+
 
