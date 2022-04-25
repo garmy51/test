@@ -101,15 +101,90 @@ import UIKit
 //for i in 0..<6 {
 //    print(i)
 //}
+////
+//
+//
+//let abc:Int = 100
+////Int string Character Bool
+//
+//var aa: String = "abcdef"
+//
+//func a() {
+//
+//}
+//
+//func plus(first: Int, second: Int) -> Int {
+//    return first + second
+//}
+//
+//
+//print(plus(first: 1, second: 2))
+//
+//
+//
+//func minus(first: Int, second: Int) ->Int {
+//
+//    if first > second {
+//        return first - second
+//    } else if second > first {
+//        return second - first
+//
+//    }
+//    return 0
+//}
+//print(minus(first: 1, second: 10))
+//
+//
+//func carculator(first: Int, second: Int, abc: Character) -> Int {
+//    if abc == "+" {
+//        return plus(first: first, second: second)
+//    } else if abc == "-" {
+//        return minus(first: first, second: second)
+//    }
+//    return 0
+//}
+// print(carculator(first: 5, second: 5, abc: "-"))
+//
+//
+//
+//enum 연산자 {
+//    case 더하기
+//    case 빼기
+//    case 나누기
+//    case 곱하기
+//}
+//
+//func carculator(first: Int, second: Int, o: 연산자) ->Int
+//{
+//    switch o {
+//    case .더하기:
+//        return first + second
+//    case .빼기:
+//        return minus(first: first, second: second)
+//    case .나누기:
+//        return first / second
+//    case .곱하기:
+//        return first * second
+//    }
+//}
+//
+//print(carculator(first: 1, second: 100, o: .빼기))
 //
 
+var a: Int = 100
+let b: String = "안녕하세요"
+var c: Bool = true
 
-let abc:Int = 100
-//Int string Character Bool
 
-var aa: String = "abcdef"
 
-func a() {
+func bb(first: Int, second: Int) -> Int {
+    return first - second
+}
+
+
+for i in 0..<5 {
+    print("안녕하세요")
+    
     
 }
 
@@ -117,52 +192,45 @@ func plus(first: Int, second: Int) -> Int {
     return first + second
 }
 
-print(plus(first: 1, second: 2))
-
-func minus(first: Int, second: Int) ->Int {
-
+func minus(first: Int, second: Int) -> Int {
     if first > second {
         return first - second
-    } else if second > first {
+    } else if first < second {
         return second - first
-
     }
     return 0
 }
-print(minus(first: 1, second: 10))
 
-
-func carculator(first: Int, second: Int, abc: Character) -> Int {
-    if abc == "+" {
-        return plus(first: first, second: second)
-    } else if abc == "-" {
-        return minus(first: first, second: second)
-    }
-    return 0
+func multiply(first: Int, second: Int) -> Int {
+    return first * second
 }
- print(carculator(first: 5, second: 5, abc: "-"))
 
+func division(first: Int, second: Int) -> Int {
+    if first > second {
+        return first / second
+    } else if first < second {
+        return second / first
+    }
+    return 1
+}
 
 
 enum 연산자 {
     case 더하기
     case 빼기
-    case 나누기
     case 곱하기
+    case 나누기
 }
 
-func carculator(first: Int, second: Int, o: 연산자) ->Int
-{
+func carculator(first: Int, second: Int, o: 연산자) -> Int {
     switch o {
     case .더하기:
-        return first + second
+        return plus(first: first, second: second)
     case .빼기:
         return minus(first: first, second: second)
     case .나누기:
-        return first / second
+        return division(first: first, second: second)
     case .곱하기:
-        return first * second
+        return multiply(first: first, second: second)
     }
 }
-
-print(carculator(first: 1, second: 100, o: .빼기))

@@ -100,11 +100,4 @@ class carculatorviewcontor: UIViewController {
 //        resultLable.text = "\(result)"
     }
     
-    
-    
-    
-    
-    
 }
-
-
